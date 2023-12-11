@@ -9,6 +9,6 @@ public class MoveByVelocity : MonoBehaviour
     void Update()
     {
         Vector2 inputMouvement = moveInputRef.action.ReadValue<Vector2>();
-        body.velocity = new Vector3(inputMouvement.x * speed, 0, inputMouvement.y * speed);
+        body.velocity = new Vector3(inputMouvement.x * speed, body.velocity.y, inputMouvement.y * speed);
     }
 }
